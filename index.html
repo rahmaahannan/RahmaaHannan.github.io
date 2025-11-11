@@ -14,6 +14,7 @@
   z-index: 1000;
 }
 
+
 }
 
 .nav a {
@@ -54,6 +55,112 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+  .upcoming {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .upcoming h2 {
+  
+  text-fill-color: transparent;
+    margin-bottom: 15px;
+  }
+
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    
+  }
+
+  .note {
+    background-color: #ffc0cb; /* light pink note */
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3), inset 0 0 5px rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s;
+    margin: 10px;
+  }
+
+  .note:hover {
+    transform: rotate(-3deg) scale(1.05);
+    cursor: grab;
+  }
+
+.decor {
+  background-color: white;
+  border: 6px dashed #f5b0cc;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+    animation: borderColorAnim 3s linear infinite;
+}
+.note:nth-child(1) { background-color: #ffc0cb; } /* light pink */
+.note:nth-child(2) { background-color: #ffb6c1; } /* pink */
+.note:nth-child(3) { background-color: #ff69b4; } /* hot pink */
+.note:nth-child(4) { background-color: #ffe4e1; } /* misty rose */
+
+.note:nth-child(odd) { transform: rotate(-3deg); }
+.note:nth-child(even) { transform: rotate(2deg); }
+.note:hover { transform: rotate(0deg) scale(1.05); cursor: grab; }
+
+.note {
+  position: relative;
+}
+
+.note::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #ff1493; /* hot pink pin head */
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.note::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 2px;
+  height: 12px;
+  background: #c71585; /* pin body */
+}
+
+.headingdecor {
+border: 3px double pink;
+border-radius: 15px;
+margin: 20px;
+padding: 5px;
+  background: linear-gradient(90deg, #ffb6c1, #ff69b4);
+
+}
+}
+
+@keyframes borderColorAnim {
+  0%   { border-color: #ff4da6; }  
+  25%  { border-color: #ff99cc; } 
+  50%  { border-color: #ffccde; }  
+  75%  { border-color: #e28ba8; }  
+  100% { border-color: #ff4da6; }  
+}
+}
 
 </style>
 </head>
@@ -67,6 +174,19 @@ body {
   <a href="about.html">About Me</a> |
   <a href="glossary.html">Glossary</a>
 </div>
+
+<div class = decor>
+<section class="upcoming">
+  <h2 class = headingdecor>Upcoming Projects (11/11/2025)</h2>
+  <div class="board">
+    <div class="note">filling the contents in my navbar</div>
+    <div class="note">Custom emojis</div>
+    <div class="note">Interactive stuff perhaps 🤔</div>
+    <div class="note">Maybe adding more updates here?</div>
+  </div>
+</section>
+</div>
+
 
 
 
@@ -93,6 +213,3 @@ body {
 
 
 <footer>Made with 💗 by Rahmaa</footer>
-
-
-
