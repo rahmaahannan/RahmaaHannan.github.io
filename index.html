@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -167,19 +168,22 @@ padding: 5px;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: bold;
- 
+animation: smoothPulse 2s ease-in-out infinite;
 }
 
-.pinned{
-  animation: pulse 1.75s infinite;
+@keyframes smoothPulse {
+  0%   { transform: scale(1);       box-shadow: 0 0 0 #ff4da6; }
+  10%  { transform: scale(1);    box-shadow: 0 0 3px #ff4da6; }
+  20%  { transform: scale(1);    box-shadow: 0 0 6px #ff4da6; }
+  30%  { transform: scale(1);    box-shadow: 0 0 9px #ff4da6; }
+  40%  { transform: scale(1);    box-shadow: 0 0 12px #ff4da6; }
+  50%  { transform: scale(1);    box-shadow: 0 0 15px #ff4da6; }
+  60%  { transform: scale(1);    box-shadow: 0 0 12px #ff4da6; }
+  70%  { transform: scale(1);    box-shadow: 0 0 9px #ff4da6; }
+  80%  { transform: scale(1);    box-shadow: 0 0 6px #ff4da6; }
+  90%  { transform: scale(1);    box-shadow: 0 0 3px #ff4da6; }
+  100% { transform: scale(1);       box-shadow: 0 0 0 #ff4da6; }
 }
-
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 #ff4da6; }
-  50% { transform: scale(1); box-shadow: 0 0 15px #ff4da6; }
-  100% { transform: scale(1); box-shadow: 0 0 0 #ff4da6; }
-}
-
 
 
 
