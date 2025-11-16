@@ -106,6 +106,13 @@ body {
   text-align: center;
     animation: borderColorAnim 3s linear infinite;
 }
+@keyframes borderColorAnim {
+  0%   { border-color: #ff4da6; }  
+  25%  { border-color: #ff99cc; } 
+  50%  { border-color: #ffccde; }  
+  75%  { border-color: #e28ba8; }  
+  100% { border-color: #ff4da6; }  
+}
 .note:nth-child(1) { background-color: #ffc0cb; } /* light pink */
 .note:nth-child(2) { background-color: #ffb6c1; } /* pink */
 .note:nth-child(3) { background-color: #ff69b4; } /* hot pink */
@@ -151,16 +158,30 @@ padding: 5px;
   background: linear-gradient(90deg, #ffb6c1, #ff69b4);
 
 }
+
+
+.pinned .tag {
+  background-color: #ff4da6;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+ 
 }
 
-@keyframes borderColorAnim {
-  0%   { border-color: #ff4da6; }  
-  25%  { border-color: #ff99cc; } 
-  50%  { border-color: #ffccde; }  
-  75%  { border-color: #e28ba8; }  
-  100% { border-color: #ff4da6; }  
+.pinned{
+  animation: pulse 1.75s infinite;
 }
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 #ff4da6; }
+  50% { transform: scale(1); box-shadow: 0 0 15px #ff4da6; }
+  100% { transform: scale(1); box-shadow: 0 0 0 #ff4da6; }
 }
+
+
+
 
 </style>
 </head>
@@ -188,7 +209,8 @@ padding: 5px;
 </div>
 
 
-<div class="post">
+<div class="post pinned">
+<span class="tag">📌 Pinned</span>
 <h2><u>Update</u>: Added Independent Studies in About me section (15/11/2025)  </h2>
 <p>I decided to add an independent studies, since my interest in math spans out off calculations aswell. As much as it's interesting to problem solve. I feel as if alot of questions aren't asked. Like, how did we end up with the fibbonaci sequence? How did we approximate Pi? or how did we end up with the Pythagoras theorem? </p>
 <p> I thought it would be really cool to talk about the origins of math, aswell as to keep the problem-solving aspect on this page. Right now, I have done a post on Archimedes' Method of Exhaustion, explaining about how we got more closer to the value of Pi thanks to his method. I also explore "What is Pi?" I realise this is an important question which most don't ask. People only accept its purpose but never stop to question why it's there.</p>
