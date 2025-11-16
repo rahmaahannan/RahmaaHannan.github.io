@@ -66,12 +66,37 @@ body {
   padding: 5px;
   margin: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
     animation: borderColorAnim 3s linear infinite;
     
    
 }
 
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+
+.pfp {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 50px 40px 40px 50px;
+  border: 5px solid black;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pfp:active {
+  transform: rotate(360deg) scale(1.2);
+  box-shadow: 0 0 25px #ff4da6;
+}
+
+}
+
+.intro-text {
+  flex: 1;
+}
 
 @keyframes borderColorAnim {
   0%   { border-color: #ff4da6; }  
@@ -95,9 +120,16 @@ body {
 </div>
 
 <div class ="intro">
-<h2> IN PROGRESS  👷‍♂️</h2> 
+ <img src="https://avatars.githubusercontent.com/u/81713316?v=4" class="pfp">
+ 
+ <div class="intro-text">
+ <h2> Hey, I'm Rahmaa! 👋</h2>
+<p> I’m a Y11 student currently doing my GCSEs. My interests revolve around problem-solving and mathematical ideas, which is why I started this repo. I plan to develop it even more throughout college and A-levels, broadening the content as I learn. I’m hoping to take Further Maths, Maths, and Economics, I’ve been building up my skills to make those goals quite realistic.  </p>
+<p>
+I just finished my mocks, but I’m still revising GCSE content and slowly dipping into A-level topics. I've realised maths shows up everywhere. Even in subjects which claim they’re “number-free.” But they always end up relying on statistics, patterns, or equations. It's fascinating to know that everything around us reduces to structure: shapes, curves, area, volume. I think the reason I like maths the most is because, you can actually break things down and understand them just by following the logic.</p>
+<p>My profile picture is based on Archimedes' Method Of Exhaustion, which you can learn more on the post made on (15/11/2025). P.S if you long-press my profile picture, it does a little cute animation! </p>
 </div>
-
+  </div>
 <div class ="post"> 
 <h2> Independent Studies: Archimedes' approximation of Pi. (15/11/2025)</h2>
 <p> Out of curiosity, I wondered how we ended up with the value of Pi. Firstly, we need to know, what is Pi? Pi is a constant used to calculate the circumference and area of a circle. The circumference of a circle is directly proportional to its diameter, only when Pi is used as a constant of it proportionality. Algebraically, we write this as  c &#8733 d when k = &#960. Or in simpler terms, c = &#960d.   </p>
